@@ -1,4 +1,5 @@
 import React from "react";
+import Affichage from "./Contact.js"
 
 const users = [
   {
@@ -27,3 +28,15 @@ const users = [
     online: true
   }
 ];
+
+const UsersList = () => (
+  users.map(props =>(
+  <Affichage
+  name = {props.name}
+  avatar = {props.avatar}
+  online = {props.online}/>
+  )
+  )
+  )
+  
+export default UsersList

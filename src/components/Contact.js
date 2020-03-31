@@ -3,7 +3,7 @@ import "./Css.css";
 
 
 
-const Contact = function (props){
+const Affichage = function (props){
     return(
         <div className="Contact">
         <img className="avatar" src={props.avatar}/> 
@@ -19,4 +19,4 @@ const Contact = function (props){
   );
 };
 
-export default Contact;
+export default Affichage;
