@@ -1,6 +1,5 @@
-import React from 'react';
-import './Css.css';
-
+import React from "react";
+import "./Css.css";
 
 
 
@@ -13,10 +12,11 @@ const Contact = function (props){
             <div>
         {props.online ? <div className="status-online"></div> : <div className="status-offline"></div> }
         {props.online ? <div className="status-text">"Online"</div> : <div className="status-text">"Offline"</div>}
+
         </div>
-        </div>
-        </div>
-        )
-    }
+      </div>
+    </div>
+  );
+};
 
 export default Contact;
