@@ -5,17 +5,17 @@ const users = [
   {
     name: "Robert Reyes",
     avatar: "https://randomuser.me/api/portraits/men/28.jpg",
-    online: false
+    online: true
   },
   {
     name: "Nellie Caldwell",
     avatar: "https://randomuser.me/api/portraits/women/17.jpg",
-    online: true
+    online: false
   },
   {
     name: "Vernon Mason",
     avatar: "https://randomuser.me/api/portraits/men/84.jpg",
-    online: true
+    online: false
   },
   {
     name: "Erica Hunt",
