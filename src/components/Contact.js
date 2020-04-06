@@ -3,19 +3,57 @@ import "./Css.css";
 
 
 
-const Affichage = function (props){
-    return(
+class Affichage extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {online : props.online}
+    }
+    render(){
+        return(
         <div className="Contact">
-        <img className="avatar" src={props.avatar}/> 
+        <img className="avatar" src={this.props.avatar}/> 
             <div className="status">
-                <h2 className="name">{props.name}</h2>
+                <h2 className="name">{this.props.name}</h2>
                     <div>
-                        {props.online ? <div className="status-online"></div> : <div className="status-offline"></div> }
-                        {props.online ? <p className="status-text">Online</p> : <p className="status-text">Offline</p>}
+
+                        {this.state.online ? 
+                        <div 
+                            onClick={event =>{
+                                const newState = !this.state.online;
+                                this.setState({online : newState})
+                            }}
+                            className="status-online">
+                        </div> 
+                        : 
+                        <div
+                            onClick={event =>{
+                                const newState = !this.state.online;
+                                this.setState({online : newState})
+                            }} 
+                            className="status-offline">
+                        </div> }
+
+                        {this.state.online ? 
+                        <p
+                            onClick={event =>{
+                                const newState = !this.state.online;
+                                this.setState({online : newState})
+                            }}
+                            className="status-text">Online
+                        </p> 
+                        :
+                        <p  
+                            onClick={event =>{
+                                const newState = !this.state.online;
+                                this.setState({online : newState})
+                            }}
+                            className="status-text">Offline
+                        </p>}
                     </div>
              </div>
         </div>
-  );
+        )
+    };
 };
 
 export default Affichage;
